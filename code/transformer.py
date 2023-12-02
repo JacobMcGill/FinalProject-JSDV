@@ -3,9 +3,9 @@ import os
 from sentence_transformers import SentenceTransformer, util
 import pandas as pd
 
-in_path = os.path.join("data", "Outscraper_Austin_hotel_reviews.csv")
-out_dir = "artifacts"
-output_path = os.path.join(out_dir, "embedded_data.csv")
+# in_path = os.path.join("data", "Outscraper_Austin_hotel_reviews.csv")
+# out_dir = "artifacts"
+# output_path = os.path.join(out_dir, "embedded_data.csv")
 
 def dataframe(path):
     "Reads in hotel data as a dataframe"
