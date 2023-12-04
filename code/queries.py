@@ -17,7 +17,7 @@ def sql_query(question):
         <=> embedding as cosine
         from hotel_reviews)
         select name, cosine from cosine 
-        where cosine <0.4
+        where cosine <0.3
         order by cosine asc limit 10
     """
 
