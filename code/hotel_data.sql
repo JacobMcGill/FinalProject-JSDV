@@ -16,6 +16,20 @@ CREATE TABLE hotel_reviews (
     review_rating numeric,
     review_timestamp numeric,
     review_likes numeric,
+    reviews_per_score_1 numeric,
+    reviews_per_score_2 numeric,
+    reviews_per_score_3 numeric,
+    reviews_per_score_4 numeric,
+    reviews_per_score_5 numeric,
     embedding vector(384)
 )
-Create index on hotel_reviews using ivfflat (embedding vector_cosine_ops) with (lists = 386)
+Create Table hotels_google (
+    id bigserial,
+    name varchar(25),
+    google_id varchar(25) constrain google_id_key primary key,
+    place_id varchar(25),
+
+)
+Create index hotelembedding_idx on hotel_reviews using ivfflat (embedding vector_cosine_ops) with (lists = 386)
+Create index hotel_idx on hotels_google(name) 
+
