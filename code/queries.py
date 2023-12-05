@@ -5,7 +5,7 @@ from sqlalchemy import text
 
 
 def sql_query(question):
-    """Takes query, embeds it, and has a SQL query that returns the top 10 hotels in similarity"""
+    """Takes query, embeds it, and has a SQL query that returns the top 10 hotels in similarity and returns the result as a dataframe"""
     model_name = 'all-MiniLM-L6-v2'
     model = SentenceTransformer(model_name)
     embedded_text = model.encode(question, convert_to_numpy=True).tolist()
