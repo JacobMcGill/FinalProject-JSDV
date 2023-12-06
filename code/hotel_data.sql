@@ -26,7 +26,6 @@ CREATE TABLE hotel_reviews (
     zip_code var_char(7),
     Latitude varchar,
     Longitude varchar,
-    Googe_Reviews varchar (50000),
     embedding vector(384)
 )
 --Creates ivvflat index for data. Run this in SQL after uploading data
