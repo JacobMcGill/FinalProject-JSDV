@@ -29,7 +29,7 @@ def sql_query(question):
             SELECT *, '{embedded_text}'::vector(384) <=> embedding AS cosine
             FROM hotel_reviews
         )
-        SELECT name, rating, zip_code, cosine FROM cosine , location_link
+        SELECT name, cosine FROM cosine 
         WHERE cosine < 0.3
         ORDER BY cosine ASC
         LIMIT 3
