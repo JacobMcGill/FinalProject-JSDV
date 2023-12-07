@@ -29,7 +29,11 @@ After the hotel data had been cleaned we used the python package sentence_transf
 
 After we had uploaded the embedded hotel review data to PostgreSQL, we enabled the extension “vector” in our database to allow us to use vector search.  We then indexed the embedding vectors to ensure a more efficient search. We used ivvflat indexing to index the vectors. After the data had been indexed, we used vector search based off of the cosine similarity of an embedded query and embedded in the hotel. The cosine similarity calculated the difference between the vector embedding of the query (such as “Hotel with clean sheets”) and the vectors of the embedded reviews, returning the hotel with the least difference between the 2 vectors. We limited the cosine similarity to 0.3 between the query and the results(with the similarities being between 0 and 2, 0 being the most similar and 2 being the least similar), so the similarity search in SQL would only pull at most 3 hotels that had a cosine similarity of 0.3 to the written query. This was due to the fact that cosine similarities above 0.3 are generally not effective. The vector search was enabled by the function queries.py, which was used in our Streamlit app return results from these queries.
 
-6. Results
+6. Limitations and extensions of our work:
+
+Due to how the Google Maps API and Outscraper works, we were only limited to 60 hotels in our analysis and up to only 200 reviews per hotel, so this does not provide a comprehensive search of hotels in the Austin area. Also, since reviews were left by individuals who may have had strong opinions about the hotel (either positive or negative), the vector search may not capture all the services provided by the hotel. An extension to our work here could include reviews from other sites (such as Yelp or Travels.com) or data provided by the hotels themselves (such as advertised services).
+
+7. Results
 
 We ran the data in SQL to get these results (the SQL queries that produced these results can be found in sql_queries.sql in the code folder of our repository).
 
