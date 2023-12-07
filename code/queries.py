@@ -18,10 +18,11 @@ def sql_query(question):
         from hotel_reviews)
         select name, cosine from cosine 
         where cosine <0.3
-        order by cosine asc limit 10
+        order by cosine asc limit 3
     """
 
     result_df = pd.read_sql_query(text(query), engine)
+    
     return result_df
 
 if __name__ == "__main__":

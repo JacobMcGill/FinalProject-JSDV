@@ -1,6 +1,6 @@
 # Need to install "pip install sentence-transformers"
 import os
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers import SentenceTransformer
 import pandas as pd
 
 dir = "artifacts"
@@ -20,8 +20,6 @@ def review_embed(df):
     df["review_text"] = df["review_text"].astype(str)
     review_embeddings = model.encode(df["review_text"].tolist())
     df['embeddings'] = review_embeddings.tolist()
-    # embeddings_df = pd.DataFrame(review_embeddings, columns=[f'embedding_{i+1}' for i in range(review_embeddings.shape[1])])
-    # df = pd.concat([df, embeddings_df], axis=1)
     return df
 def print_data_csv_header(df):
     "Takes embedded data and associated info and prints it as a csv with a header"
