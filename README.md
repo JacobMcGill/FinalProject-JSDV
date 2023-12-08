@@ -87,3 +87,5 @@ Using streamlit commands we have created a simple web page with a title and a te
 
 ![similarity_search](https://github.com/JacobMcGill/FinalProject-JSDV/assets/143020777/32aa684b-4848-4c06-9ba1-8b4cfda5e9fb)
 
+A version of our streamlit app can be accessed at the url https://apppy-azbxftpp9p4sdew34udfse.streamlit.app/.
+
