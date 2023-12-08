@@ -6,9 +6,7 @@ requests==2.27.1
 SQLAlchemy==1.4.34
 python-dotenv==0.20.0
 psycopg2-binary==2.9.3
-streamlit==1.15.0git
 streamlit-option-menu==0.3.2
-sentence-transformers
 streamlit==1.15.0
 streamlit-option-menu==0.3.2
 sentence-transformers==2.2.2
