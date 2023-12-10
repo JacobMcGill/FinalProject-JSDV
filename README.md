@@ -1,4 +1,7 @@
-# FinalProject-JSDV
+ECO395M FinalProject
+
+Jacob McGill, Shuting Yao, Daniel Oliner, Vimoli Mehta
+
 Overview: The aim of this project is to collect reviews for hotels in the Austin area, then conduct an analysis of these reviews. This analysis included comparing hotels in Austin by reviews (including the review scores, number of reviews for hotels, and distribution of review scores) and using the python package “sentence-transformers” to embed written reviews as vectors. Embedding these vectors allowed us to develop a vector search function capable of identifying hotels where specific keywords (i.e. “fitness center” or “laundry service”) are frequently mentioned in reviews.
 
 We collected hotel data using Google Map API and then Outscraper.
